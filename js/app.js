@@ -4,7 +4,7 @@ angular.module('hotspot',["ui.router"])
     $stateProvider
     .state("home", {
       url: "/",
-      templateUrl: "../index.html"
+      templateUrl: "./index.html"
     })
 
     .state("about", {
