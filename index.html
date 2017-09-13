@@ -2,11 +2,16 @@
 <html ng-app="hotspot">
   <head>
     <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
     <link rel="stylesheet" href="/styles.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <title></title>
   </head>
   <body ng-controller="mainCtrl">
 {{ test }}
+<div class="container">
+<canvas id="myChart" width="300" height="300"></canvas>
+</div>
 
 <div ng-repeat="location in getLocation">
   {{ location.happiness }}
