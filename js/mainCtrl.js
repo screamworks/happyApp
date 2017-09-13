@@ -16,28 +16,55 @@ promise2.then(function(data){
 
 var myChart = document.getElementById('myChart').getContext('2d')
 Chart.defaults.global.defaultFontFamily =  'Lato';
-Chart.defaults.global.defaultFontSize = 18;
+Chart.defaults.global.defaultFontSize = 25;
 Chart.defaults.global.defaultFontColor = '#777';
 var lineChart = new Chart(myChart, {
   type: 'line',
   data: {
-    labels:['Points of Satisfaction'],
-    dataSets: [{
-      label: "In Years",
-      data: [
-        200000,
-        150000,
-        175000
-      ],
+    labels:[2008,2009,2010,2011,2012,2013,2014,2015],
+    datasets: [{
+      label: "Satisfaction in Points",
+      fill: false,
+      lineTension: 0.1,
+      borderColor: "blue",
+      borderCapStyle: 'butt',
+      borderDash: [],
+      borderDashOffset: 0.0,
+      borderJoinStyle: 'miter',
+      pointBorderColor: 'red',
+      pointBorderWidth: 1,
+      pointHoverRadius: 5,
+      pointHoverBackgroundColor: 'pink',
+      pointHoverBorderColor: 'red',
+      pointHoverBorderWidth: 2,
+      pointRadius: 1,
+      pointHitRadius: 10,
+      data: [5.7,5.8,5.9,6.0,6.1,6.2,6.3,6.4],
       // backgroundColor: 'green'
       backgroundColor: [
-        'red',
-        'green',
-        'blue'
+        'rgba(225,226,228,0.5)'
       ]
     }]
   },
   options: {
+    responsive: true,
+    scaleShowValues: true,
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true,
+          steps: 0.5,
+          stepValue: 0.1,
+          max: 6.4,
+          min: 5.7
+        }
+      }],
+      xAxes: [{
+        ticks: {
+          autoSkip: false
+        }
+      }]
+  },
     title: {
       display: true,
       text: 'Happiness Levels Measured',
