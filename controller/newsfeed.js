@@ -1,4 +1,4 @@
-angular.module('hotspot').controller('newsfeed', function($scope, mainService){
+angular.module('hotspot').controller('newsfeedCtrl', function($scope, mainService){
 
 
 

@@ -13,3 +13,7 @@
   width: 15000px;
   overflow-x: scroll;
 }
+
+h1 {
+  font-size: 500pt;
+}

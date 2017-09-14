@@ -10,9 +10,21 @@ promise.then(function(data){
 
 var promise2 = mainService.getNews();
 promise2.then(function(data){
-  $scope.getNews = data
+  // $scope.getNews = data
+    $scope.getNews = data
   console.log($scope.getNews)
 })
+
+
+
+
+
+
+
+
+
+
+
 
 var happyData = [];
 
@@ -129,6 +141,7 @@ var lineChart = new Chart(myChart, {
 })
 
 console.log('happydata:', happyData)
+
 
 
 
