@@ -29,13 +29,14 @@ console.log(response)
 var myChart = document.getElementById('myChart').getContext('2d')
 Chart.defaults.global.defaultFontFamily =  'Lato';
 Chart.defaults.global.defaultFontSize = 25;
-Chart.defaults.global.defaultFontColor = '#777';
+Chart.defaults.global.defaultFontColor = 'black';
+Chart.defaults.global.maintainAspectRatio = false;
 
 var lineChart = new Chart(myChart, {
 
   type: 'line',
   data: {
-    labels:[2008, 2009,2008, 2009,2008, 2009,],
+    labels: response.map(val => val.happyDates), 
     datasets: [{
         fillColor: "rgba(220,220,220,0)",
         strokeColor: "rgba(220,180,0,1)",
@@ -72,7 +73,11 @@ var lineChart = new Chart(myChart, {
     }]
   },
   options: {
+    animation: {
+      duration: 5000
+    },
     responsive: true,
+    maintainAspectRatio: false,
     scaleShowValues: true,
     scales: {
       yAxes: [{
