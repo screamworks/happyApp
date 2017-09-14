@@ -36,7 +36,7 @@ var lineChart = new Chart(myChart, {
 
   type: 'line',
   data: {
-    labels: response.map(val => val.happyDates), 
+    labels: response.map(val => val.happyDates), //loop through val, loop an array, if(val!==array values) val.push([val, index])
     datasets: [{
         fillColor: "rgba(220,220,220,0)",
         strokeColor: "rgba(220,180,0,1)",
@@ -91,7 +91,7 @@ var lineChart = new Chart(myChart, {
       }],
       xAxes: [{
         ticks: {
-          autoSkip: false
+          autoSkip: false,
         }
       }]
   },
