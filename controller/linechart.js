@@ -1,4 +1,6 @@
-angular.module('hotspot').controller('linechart', function($scope, mainService){
+angular.module('hotspot').controller('linechartCtrl', function($scope, mainService){
+
+
 
 
 });

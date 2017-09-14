@@ -8,25 +8,25 @@ angular.module('hotspot',["ui.router"])
     })
 
     .state("about", {
-      url: "/",
+      url: "/about",
       templateUrl: "../views/about.html",
       controller: "aboutCtrl"
     })
 
     .state("factpage", {
-      url: "/",
+      url: "/factpage",
       templateUrl: "../views/factpage.html",
       controller: "factpageCtrl"
     })
 
     .state("linechart", {
-      url: "/",
+      url: "/linechart",
       templateUrl: "../views/linechart.html",
       controller: "linechartCtrl"
     })
 
     .state("newsfeed", {
-      url: "/",
+      url: "/newsfeed",
       templateUrl: "../views/newsfeed.html",
       controller: "newsfeedCtrl"
     })

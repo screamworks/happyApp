@@ -12,18 +12,36 @@ this.getHappyData = function(){
 
   return $http.get(apiUrl).then(function(response){
     // deferred.resolve(response);
-    // console.log(response);
+    // console.log("is this everything?", response);
     // return response.data.objects.map(number => number.happiness)
     //
-    return response.data.objects.map(number => number.happiness)
-  //  console.log(response.data.objects.map(number => number.happiness) );
+    return response.data.objects.map(number => {
+
+      return {
+        happiness :  parseFloat(number.happiness),
+        happyDates : number.date
+      }
+      // console.log(number.happiness)
+      // parseFloat(number.happiness)
+    })
+
+   //console.log(response.data.objects.map(number => number.happiness) );
 
   })
 
 
 }
 
-
+// my test code to get years for chart
+// this.getYearData = function(){
+//   console.log('hello from yeardata');
+//
+//   return $http.get(apiUrl).then(function(response){
+//
+//     return response.data.objects.map(number => number.date)
+//
+//   })
+// }
 
 
 this.getLocation = function(){

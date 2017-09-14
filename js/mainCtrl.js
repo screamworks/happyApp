@@ -1,6 +1,6 @@
 angular.module('hotspot').controller('mainCtrl', function($scope, mainService){
 
-$scope.test = "shiv"
+
 
 var promise = mainService.getLocation();
 promise.then(function(data){
@@ -16,7 +16,7 @@ promise2.then(function(data){
 
 var happyData = [];
 
-
+var yearData = [];
 
 
 
@@ -24,51 +24,47 @@ mainService.getHappyData().then( response => {
   console.log('hello from ctrl happy');
 console.log(response)
 ////
-happyData = response;
-
-///
-})
 
 
 var myChart = document.getElementById('myChart').getContext('2d')
 Chart.defaults.global.defaultFontFamily =  'Lato';
 Chart.defaults.global.defaultFontSize = 25;
 Chart.defaults.global.defaultFontColor = '#777';
+
 var lineChart = new Chart(myChart, {
 
   type: 'line',
   data: {
-    labels:[2008,2009,2010,2011,2012,2013,2014,2015],
+    labels:[2008, 2009,2008, 2009,2008, 2009,],
     datasets: [{
         fillColor: "rgba(220,220,220,0)",
         strokeColor: "rgba(220,180,0,1)",
         pointColor: "rgba(220,180,0,1)",
-        data: [20, 30, 80, 20, 40, 10, 60]
+        data: response.map(val => val.happiness),
       },
       {
       fillColor: "rgba(220,220,220,0)",
         strokeColor: "rgba(220,180,0,1)",
         pointColor: "rgba(220,180,0,1)",
-        data: [...happyData]}, {
+        data: response.map(val => val.happyDates)}, {
       label: "Satisfaction in Points",
       fill: false,
-      // lineTension: 0.1,
-      // borderColor: "blue",
-      // borderCapStyle: 'butt',
-      // borderDash: [],
-      // borderDashOffset: 0.0,
-      // borderJoinStyle: 'miter',
-      // pointBorderColor: 'red',
-      // pointBorderWidth: 1,
-      // pointHoverRadius: 5,
-      // pointHoverBackgroundColor: 'pink',
-      // pointHoverBorderColor: 'red',
-      // pointHoverBorderWidth: 2,
-      // pointRadius: 1,
-      // pointHitRadius: 10,
-      // xAxisID: '',
-      // yAxisID: '',
-      data: [...happyData],
+      lineTension: 0.1,
+      borderColor: "blue",
+      borderCapStyle: 'butt',
+      borderDash: [],
+      borderDashOffset: 0.0,
+      borderJoinStyle: 'miter',
+      pointBorderColor: 'red',
+      pointBorderWidth: 1,
+      pointHoverRadius: 5,
+      pointHoverBackgroundColor: 'pink',
+      pointHoverBorderColor: 'red',
+      pointHoverBorderWidth: 2,
+      pointRadius: 1,
+      pointHitRadius: 10,
+
+      data: happyData,
       // backgroundColor: 'green'
       backgroundColor: [
         'rgba(225,226,228,0.5)'
@@ -82,10 +78,10 @@ var lineChart = new Chart(myChart, {
       yAxes: [{
         ticks: {
           beginAtZero: true,
-          steps: 0.5,
-          stepValue: 0.1,
-          max: 100,
-          min: 5
+          steps: 0.1,
+          stepValue: 0.2,
+          max: 6.4,
+          min: 5.90
         }
       }],
       xAxes: [{
@@ -100,7 +96,7 @@ var lineChart = new Chart(myChart, {
       fontSize: 25
     },
     legend: {
-      display: true,
+      display: false,
       position: 'right',
       labels: {
 
@@ -108,7 +104,7 @@ var lineChart = new Chart(myChart, {
     },
     layout: {
       padding: {
-        left: 50,
+        left: 0,
         right: 0,
         bottom: 0,
         top: 0
@@ -118,7 +114,19 @@ var lineChart = new Chart(myChart, {
       enabled: true
     }
   }
+
 })
+
+
+///
+})
+
+console.log('happydata:', happyData)
+
+
+
+
+
 
 
 
