@@ -8,16 +8,33 @@ promise.then(function(data){
 
 })
 
-var promise2 = mainService.getNews();
-promise2.then(function(data){
-  // $scope.getNews = data
-    $scope.getNews = data
-  console.log($scope.getNews)
-})
+// var promise2 = mainService.getNews();
+// promise2.then(function(data){
+//   $scope.getNews = data
+//     console.log($scope.getNews = data)
+//   // console.log($scope.getNews)
+// })
 
 
+// $scope.gotNews = mainService.getNews(){
+//   var articles = getNews.response.docs;
+//     for(var i = 0; i < articles.length; i++){
+//       createElement('h1', articles[i].headline.main);
+//       createP(articles[i].snippet);
+//     }
+// }
 
-
+$scope.gotNews = function(val) {
+  if (!val){
+    alert('Please Add Date To Search');
+    return;
+  }
+  val = val.split('-').join('');
+  mainService.getNews(val).then(function(response) {
+    console.log(response);
+    $scope.news = response.data.response.docs;
+  })
+}
 
 
 
@@ -33,8 +50,8 @@ var yearData = [];
 
 
 mainService.getHappyData().then( response => {
-  console.log('hello from ctrl happy');
-console.log(response)
+  // console.log('hello from ctrl happy');
+// console.log(response)
 ////
 
 
@@ -106,6 +123,7 @@ var lineChart = new Chart(myChart, {
           autoSkip: false,
           maxRotation: 180,
           minRotation: 180,
+          fontSize: 12
         }
       }]
   },
@@ -140,7 +158,7 @@ var lineChart = new Chart(myChart, {
 ///
 })
 
-console.log('happydata:', happyData)
+
 
 
 

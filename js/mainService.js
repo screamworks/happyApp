@@ -6,11 +6,13 @@ var apiUrl = "https://andyreagan-hedonometer-v1.p.mashape.com/timeseries/?mashap
 
 var apiUrl2 = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=912063944b374716acd9a1ea702b50c0"
 
+// var dynamic_url =
+
 var deferred = $q.defer();
 
 
 this.getHappyData = function(){
-  console.log('hello from service');
+  // console.log('hello from service');
 
   return $http.get(apiUrl).then(function(response){
     // deferred.resolve(response);
@@ -55,8 +57,10 @@ $http.get(apiUrl2).then(function(data){
   deferred2.resolve(data);
 })
 
-this.getNews = function(){
-  return deferred2.promise
+this.getNews = function(articleDate){
+  console.log(articleDate);
+  return $http.get("https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=912063944b374716acd9a1ea702b50c0&begin_date=" + articleDate + "&end_date=" + articleDate);
+  // return deferred2.promise
 }
 
 });
