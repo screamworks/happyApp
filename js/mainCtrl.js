@@ -92,6 +92,8 @@ var lineChart = new Chart(myChart, {
       xAxes: [{
         ticks: {
           autoSkip: false,
+          maxRotation: 180,
+          minRotation: 180,
         }
       }]
   },
