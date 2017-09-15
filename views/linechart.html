@@ -1,5 +1,18 @@
+
+
 <div class="chartWrapper">
 <div class="chartAreaWrapper" style="position:relative; height:80vh; width: 900vw">
 <canvas id="myChart" width="800" height="400"></canvas>
 </div>
 </div>
+
+<input type="text" name="searchBox" value="" placeholder="Enter YYYY-MM-DD" ng-model="pub_date">
+ <button ng-click="gotNews(pub_date)">CLICK ME</button>
+
+<ul ng-repeat="new in news" >
+  <li>{{ new.headline.main }}</li>
+  <li>{{ new.snippet }}</li>
+  <li>{{ new.pub_date}}</li>
+
+
+</ul>

@@ -4,31 +4,47 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="/styles.css"/>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <title></title>
+    <title>MoodX</title>
   </head>
   <body ng-controller="mainCtrl">
 
-      <div id="particles-js">
-<div class="navbar">
-  <h1>navbar</h1>
-  <h2>example</h2>
+      <div class="container-fluid">
+      <div class="menu">
+      <ul class="nav navbar-nav">
+
+          <li class="navColor"> WelcomeX </li>
+          <li class="navColor"> PieX </li>
+          <li class="navColor"> LineX </li>
+          <li class="navColor"> NewsX </li>
+
+    </ul>
+  </div>
 </div>
 
+    <div id="particles-js">
+      <div class="moodx">
+        
+        <h1>MoodX</h1>
       </div>
+    </div>
 
 
+    <div class="chartWrapper">
+    <div class="chartAreaWrapper" style="position:relative; height:80vh; width: 900vw">
+    <canvas id="myChart" width="800" height="400"></canvas>
+    </div>
+    </div>
+
+    <input type="text" name="searchBox" value="" placeholder="Enter YYYY-MM-DD" ng-model="pub_date">
+     <button ng-click="gotNews(pub_date)">CLICK ME</button>
+
+    <ul ng-repeat="new in news" >
+      <li class="clickColor">{{ new.headline.main }}</li>
+      <li class="clickColor">{{ new.snippet }}</li>
+      <!-- <li class="clickColor">{{ new.pub_date}}</li> -->
+    </ul>
 
 <ui-view></ui-view>
-
-
-
-
-
-
-
-
-
-
 
   </body>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.js"></script>
@@ -48,9 +64,6 @@ particlesJS.load('particles-js', 'particles.json', function() {
 console.log('particles.json loaded');
 });
 </script>
-
-
-
 
 
 </html>

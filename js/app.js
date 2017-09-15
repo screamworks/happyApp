@@ -3,8 +3,8 @@ angular.module('hotspot',["ui.router"])
 
     $stateProvider
     .state("home", {
-      url: "/",
-      templateUrl: "./index.html"
+      url: "/"
+      // templateUrl: "./index.html"
     })
 
     .state("about", {

@@ -130,7 +130,7 @@ var lineChart = new Chart(myChart, {
   },
     title: {
       display: true,
-      text: 'Happiness Levels Measured',
+      text: 'Variance in Positive Moods by Day',
       fontSize: 25
     },
     legend: {

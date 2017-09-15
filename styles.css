@@ -18,12 +18,13 @@
 
 #particles-js{
   background: #1a8cff;
-  height: 1000px;
+  height: 100vh;
 }
 
 body {
   margin: 0;
   padding: 0;
+  background: #404040
 }
 
 .navbar {
@@ -32,5 +33,45 @@ body {
   padding: 2em;
   position: absolute;
   top: 10px;
-  left: 50px;
+
+}
+
+.clickColor {
+  font: black;
+}
+.navColor {
+  color: white;
+  padding: 1vw;
+
+}
+nav {
+  margin: 0;
+  border-radius: 0;
+}
+.container-fluid {
+  background: #404040;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  float: none;
+
+}
+
+.navbar-inverse{
+  margin: 0;
+  padding: 0;
+  top: 0px;
+  color: white;
+  opacity: .60;
+
+}
+
+.moodx{
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 350px;
+  left: 900px;
+  font-size: 70%;
+
 }
