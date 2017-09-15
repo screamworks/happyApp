@@ -1,5 +1,6 @@
 .chartWrapper {
   position: relative;
+
 }
 
 .chartWrapper > canvas {
@@ -7,13 +8,29 @@
   left: 0;
   top: 0;
   pointer-events: none;
+
 }
 
 .chartAreaWrapper {
-  width: 15000px;
   overflow-x: scroll;
+
 }
 
-h1 {
-  font-size: 200pt;
+#particles-js{
+  background: #1a8cff;
+  height: 1000px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background: #fff;
+  opacity: 0.9;
+  padding: 2em;
+  position: absolute;
+  top: 10px;
+  left: 50px;
 }

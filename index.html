@@ -8,11 +8,26 @@
   </head>
   <body ng-controller="mainCtrl">
 
+      <div id="particles-js">
+<div class="navbar">
+  <h1>navbar</h1>
+  <h2>example</h2>
+</div>
+
+      </div>
+
+
+
 <ui-view></ui-view>
 
-<!-- <input type="text" name="searchBox" value="" placeholder="Enter YYYY-MM-DD" ng-model="date">
-<button type="button" name="submit" ng-submit=""></button>
-<h1> {{ getNews }}</h1> -->
+
+
+
+
+
+
+
+
 
 
   </body>
@@ -20,10 +35,22 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script src="/js/app.js"></script>
 <script src="/js/mainCtrl.js"></script>
 <script src="/js/mainService.js"></script>
 <script src="./controller/linechart.js"></script>
 <script src="./controller/newsfeed.js"></script>
 <script src="./controller/piechart.js"></script>
+
+<script>
+particlesJS.load('particles-js', 'particles.json', function() {
+console.log('particles.json loaded');
+});
+</script>
+
+
+
+
+
 </html>

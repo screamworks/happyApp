@@ -43,6 +43,7 @@ $scope.gotNews = function(val) {
 
 
 
+
 var happyData = [];
 
 var yearData = [];
@@ -155,8 +156,9 @@ var lineChart = new Chart(myChart, {
 })
 
 
-///
+/// 2008-01-01
 })
+
 
 
 
