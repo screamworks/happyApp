@@ -95,11 +95,71 @@ nav {
 .testing {
   position: absolute;
   text-align: center;
-  font-size: 20pt;
+  font-size: 13pt;
    left: 0;
    right: 0;
    background-color: rgba(26, 140, 255, .8);
-   top: 800px;
+   top: 600px;
    width: 100%;
    padding: 5px;
+}
+
+.begin {
+  position: absolute;
+  text-align: center;
+   left: 0;
+   right: 0;
+   background-color: rgba(26, 140, 255, .8);
+   top: 640px;
+   width: 100%;
+   padding: 5px;
+}
+
+#button-blue{
+	/*float:left;*/
+	width: 100%;
+	max-width:130px;
+	border: white solid 3px;
+	cursor: pointer;
+	background-color: #0493bd;
+	margin-top: -4px;
+	color: white;
+	text-transform: uppercase;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	letter-spacing: .5em;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-weight: 500;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+/* Change text color & background opacity on hover*/
+#button-blue:hover{
+	background-color: rgba(0,0,0,0);
+	color: #0493bd;
+}
+
+/* The white hover effect */
+.ease {
+	width: 0px;
+	height: 0px;
+	background-color: white;
+	-webkit-transition: .3s ease;
+	-moz-transition: .3s ease;
+	-o-transition: .3s ease;
+	-ms-transition: .3s ease;
+	transition: .3s ease;
+}
+
+/* Make visable when hover */
+.btn-container:hover .ease{
+	width: 100%;
+	max-width: 500px;
+	background-color: white;
+	border: 0;
 }
