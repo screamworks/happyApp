@@ -55,7 +55,7 @@ mainService.getHappyData().then( response => {
 // console.log(response)
 ////
 
-
+if (document.getElementById('myChart')){
 var myChart = document.getElementById('myChart').getContext('2d')
 Chart.defaults.global.defaultFontFamily =  'Lato';
 Chart.defaults.global.defaultFontSize = 25;
@@ -155,7 +155,7 @@ var lineChart = new Chart(myChart, {
 
 })
 
-
+}
 /// 2008-01-01
 })
 

@@ -1,10 +1,11 @@
+
 angular.module('hotspot',["ui.router"])
 .config(function($stateProvider, $urlRouterProvider){
 
     $stateProvider
     .state("home", {
-      url: "/"
-      // templateUrl: "./index.html"
+      url: "/",
+      templateUrl: "./views/home.html"
     })
 
     .state("about", {

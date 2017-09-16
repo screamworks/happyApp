@@ -1,5 +1,8 @@
 
 
+
+
+
 <div class="chartWrapper">
 <div class="chartAreaWrapper" style="position:relative; height:80vh; width: 900vw">
 <canvas id="myChart" width="800" height="400"></canvas>
@@ -10,9 +13,7 @@
  <button ng-click="gotNews(pub_date)">CLICK ME</button>
 
 <ul ng-repeat="new in news" >
-  <li>{{ new.headline.main }}</li>
-  <li>{{ new.snippet }}</li>
-  <li>{{ new.pub_date}}</li>
-
-
+  <li class="clickColor">{{ new.headline.main }}</li>
+  <li class="clickColor">{{ new.snippet }}</li>
+  <!-- <li class="clickColor">{{ new.pub_date}}</li> -->
 </ul>
