@@ -1,10 +1,10 @@
 <div class="container-fluid">
 <div class="menu">
 <ul class="nav navbar-nav">
-    <li class="navColor"> Welcome </li>
-    <li class="navColor"> Pie </li>
-    <li class="navColor"> Line </li>
-    <li class="navColor"> News </li>
+    <li class="navColor" ui-sref="home"> Welcome </li>
+    <li class="navColor" ui-sref="about"> About </li>
+    <li class="navColor" ui-sref="linechart"> Line </li>
+    <li class="navColor" ui-sref="newsfeed"> DateSearch </li>
 
 </ul>
 </div>
@@ -28,7 +28,7 @@
   <div id="wrapper">
     <section>
         <div class="btn-container">
-            <input type="submit" value="begin" id="button-blue"/>
+            <input ui-sref="about" type="submit" value="begin" id="button-blue"/>
             <div class="ease"></div>
         </div>
     </section>

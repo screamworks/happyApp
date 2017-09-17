@@ -1,3 +1,24 @@
+<div class="container-fluid">
+<div class="menu">
+<ul class="nav navbar-nav">
+    <li class="navColor" ui-sref="home"> Welcome </li>
+    <li class="navColor" ui-sref="About"> About </li>
+    <li class="navColor" ui-sref="linechart"> Line </li>
+    <li class="navColor" ui-sref="newsfeed"> DateSearch </li>
+</ul>
+</div>
+</div>
+
+
+<div class="newsBG">
+
+
+
+<img class="nyt" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/The_New_York_Times_logo.png/800px-The_New_York_Times_logo.png" />
+
+<br>
+
+
 <input type="text" name="searchBox" value="" placeholder="Enter YYYY-MM-DD" ng-model="pub_date">
  <button ng-click="gotNews(pub_date)">CLICK ME</button>
 
@@ -8,22 +29,19 @@
 </ul>
 
 
-
-
-
 <form action="https://duckduckgo.com/" role="search" class="search-form">
 		<input type="submit" value="" class="search-submit">
 		<input type="search" name="q" class="search-text" placeholder="Enter Date in YYYY-MM-DD" autocomplete="off">
 </form>
 
-<!-- <input type="text" name="searchBox" value="" placeholder="Enter YYYY-MM-DD" ng-model="pub_date">
- <button ng-click="gotNews(pub_date)">CLICK ME</button>
-
-<ul ng-repeat="new in news" >
-  <li>{{ new.headline.main }}</li>
-  <li>{{ new.snippet }}</li>
-  <li>{{ new.pub_date}}</li>
+<div class="container2">
+	<div class="search-box">
+		<span></span>
+	</div>
+</div>
 
 
-</ul> -->
-<!-- <h1> {{ getNews }}</h1> -->
+
+
+
+</div>
