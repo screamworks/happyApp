@@ -26,7 +26,7 @@ promise.then(function(data){
 
 $scope.gotNews = function(val) {
   if (!val){
-    alert('Please Add Date To Search');
+    alert('Please Add Date To Search In Format Of YYYY-MM-DD');
     return;
   }
   val = val.split('-').join('');

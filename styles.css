@@ -45,9 +45,28 @@ body {
 
 }
 
+.newsRepeat {
+  margin: 50px auto;
+  padding: 0;
+}
+
 .clickColor {
   font: black;
+  font-family: 'Roboto' sans-serif;
+  font-weight: 500;
+  padding: 4px 0;
+  font-size: 12pt;
+  list-style-type: none;
+  background-color: rgba(235, 235, 224, 0.8);
 }
+
+.clickColor:first-child {
+    /*background-color: yellow;*/
+    background-color: rgba(255, 255, 77, 0.8);
+    font-size: 14pt;
+    padding: 0;
+}
+
 .navColor {
   color: white;
   padding: 1vw;
@@ -106,9 +125,10 @@ nav {
    left: 0;
    right: 0;
    background-color: rgba(26, 140, 255, .8);
-   top: 600px;
+   top: 580px;
    width: 100%;
    padding: 5px;
+   letter-spacing: 1px;
 }
 
 .begin {
@@ -273,7 +293,12 @@ input.search-text::-webkit-search-cancel-button {
 
 
 
-
+.container3 {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%);
+}
 
 
 
@@ -347,24 +372,45 @@ input.search-text::-webkit-search-cancel-button {
 
 
 
+
+
+
+
 .newsBG {
   font-family:  'Roboto' sans-serif;
   margin: 0;
   padding: 0;
   background: url('http://www.misucell.com/data/out/9/IMG_321985.png') no-repeat center center fixed;
+  /*background-color: #e0e0d1;*/
   background-repeat: no-repeat;
   background-size: cover;
-  height: 150vh;
+  height: 200vh;
+  width: 100%;
   z-index: -5;
   text-align: center;
 }
 
 
-/*h3 {
+/*h4 {
   margin: 0 !important;
   padding: 10px;
 }*/
 
-nyt {
+.nyt {
+ position: relative;
+ width: 500px;
+ height: auto;
+ top: 7vh;
+}
 
+.nytBanner {
+  position: relative;
+  text-align: center;
+  top: 7vh;
+
+}
+
+.newsResults {
+  position: relative;
+  top: 6vh;
 }
