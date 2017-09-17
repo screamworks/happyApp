@@ -86,7 +86,7 @@ var lineChart = new Chart(myChart, {
         data: response.map(val => val.happiness),
         backgroundColor: [
               'rgba(21, 73, 97, 0.50)'
-          
+
           ],
         borderColor: [
                     'rgb(61, 165, 225)'
