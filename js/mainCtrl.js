@@ -57,10 +57,25 @@ mainService.getHappyData().then( response => {
 
 if (document.getElementById('myChart')){
 var myChart = document.getElementById('myChart').getContext('2d')
-Chart.defaults.global.defaultFontFamily =  'Lato';
-Chart.defaults.global.defaultFontSize = 25;
-Chart.defaults.global.defaultFontColor = 'black';
-Chart.defaults.global.maintainAspectRatio = false;
+Chart.defaults.global.defaultFontFamily =  'Roboto';
+Chart.defaults.global.defaultFontSize = 17;
+Chart.defaults.global.defaultFontColor = 'white';
+Chart.defaults.global.maintainAspectRatio = true;
+// test code below
+
+
+Chart.defaults.global.animationSteps = 50;
+Chart.defaults.global.tooltipYPadding = 16;
+Chart.defaults.global.tooltipCornerRadius = 0;
+Chart.defaults.global.tooltipTitleFontStyle = "normal";
+Chart.defaults.global.tooltipFillColor = "rgba(0,160,0,0.8)";
+Chart.defaults.global.animationEasing = "easeOutBounce";
+Chart.defaults.global.responsive = true;
+Chart.defaults.global.scaleLineColor = "black";
+Chart.defaults.global.scaleFontSize = 10;
+
+
+ ///
 
 var lineChart = new Chart(myChart, {
 
@@ -68,37 +83,50 @@ var lineChart = new Chart(myChart, {
   data: {
     labels: response.map(val => val.happyDates), //loop through val, loop an array, if(val!==array values) val.push([val, index])
     datasets: [{
-        fillColor: "rgba(220,220,220,0)",
-        strokeColor: "rgba(220,180,0,1)",
-        pointColor: "rgba(220,180,0,1)",
         data: response.map(val => val.happiness),
+        backgroundColor: [
+              'rgba(21, 73, 97, 0.50)'
+          
+          ],
+        borderColor: [
+                    'rgb(61, 165, 225)'
+              // 'rgba(255,99,132,1)',
+              // 'rgba(54, 162, 235, 1)',
+              // 'rgba(255, 206, 86, 1)',
+              // 'rgba(75, 192, 192, 1)',
+              // 'rgba(153, 102, 255, 1)',
+              // 'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 1
+
       },
       {
-      fillColor: "rgba(220,220,220,0)",
-        strokeColor: "rgba(220,180,0,1)",
-        pointColor: "rgba(220,180,0,1)",
+      fillColor: "rgba(151,187,205,0)",
+        strokeColor: "rgba(151,187,205,1)",
+        pointColor: "rgba(151,187,205,1)",
         data: response.map(val => val.happyDates)}, {
       label: "Satisfaction in Points",
-      fill: false,
-      lineTension: 0.1,
-      borderColor: "blue",
-      borderCapStyle: 'butt',
-      borderDash: [],
-      borderDashOffset: 0.0,
-      borderJoinStyle: 'miter',
-      pointBorderColor: 'red',
-      pointBorderWidth: 1,
-      pointHoverRadius: 5,
-      pointHoverBackgroundColor: 'pink',
-      pointHoverBorderColor: 'red',
-      pointHoverBorderWidth: 2,
-      pointRadius: 1,
-      pointHitRadius: 10,
+      // fill: false,
+      // lineTension: 0.1,
+      // borderColor: "blue",
+      // borderCapStyle: 'butt',
+      // borderDash: [],
+      // borderDashOffset: 0.0,
+      // borderJoinStyle: 'miter',
+      // pointBorderColor: 'yellow',
+      // pointBorderWidth: 1,
+      // pointHoverRadius: 5,
+      // pointHoverBackgroundColor: 'blue',
+      // pointHoverBorderColor: 'red',
+      // pointHoverBorderWidth: 2,
+      // pointRadius: 1,
+      // pointHitRadius: 10,
 
       data: happyData,
       // backgroundColor: 'green'
       backgroundColor: [
-        'rgba(225,226,228,0.5)'
+        'rgba(25,26,26,0.',
+
       ]
     }]
   },
@@ -107,16 +135,16 @@ var lineChart = new Chart(myChart, {
       duration: 5000
     },
     responsive: true,
-    maintainAspectRatio: false,
+    maintainAspectRatio: true,
     scaleShowValues: true,
     scales: {
       yAxes: [{
         ticks: {
           beginAtZero: true,
           steps: 0.1,
-          stepValue: 0.2,
-          max: 6.4,
-          min: 5.90
+          stepValue: 0.1,
+          max: 6.40,
+          min: 5.80
         }
       }],
       xAxes: [{
@@ -124,14 +152,15 @@ var lineChart = new Chart(myChart, {
           autoSkip: false,
           maxRotation: 180,
           minRotation: 180,
-          fontSize: 12
+          fontSize: 1
         }
       }]
   },
     title: {
       display: true,
-      text: 'Variance in Positive Moods by Day',
-      fontSize: 25
+      text: 'Variance in Moods by Day',
+      fontSize: 22
+
     },
     legend: {
       display: false,
@@ -156,7 +185,8 @@ var lineChart = new Chart(myChart, {
 })
 
 }
-/// 2008-01-01
+
+
 })
 
 

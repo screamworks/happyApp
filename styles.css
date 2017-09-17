@@ -1,6 +1,9 @@
 .chartWrapper {
   position: relative;
-
+  padding: 2vw;
+  background-color: #262626;
+  /*opacity: .9;*/
+  color: white;
 }
 
 .chartWrapper > canvas {
@@ -16,10 +19,14 @@
 
 }
 
+
+
+
+
 #particles-js{
   background: #1a8cff;
   height: 100vh;
-  /*background-color: rgba(26, 140, 255, .7);*/
+
 
 }
 
