@@ -101,6 +101,7 @@ nav {
   font-size: 80pt;
   color: #1a1a1a;
   background-color: rgba(26, 140, 255, .7);
+  letter-spacing: 2px;
 }
 
 .first {
@@ -428,7 +429,8 @@ input.search-text::-webkit-search-cancel-button {
   animation: typing-text 1s steps(200);
   font-family: 'Roboto' sans-serif;
   letter-spacing: 1px;
-  /*background: #F2F2F2;*/
+  background: #F2F2F2;
+  height: 100vh;
   /*overflow: scroll;
   white-space: nowrap;*/
 
