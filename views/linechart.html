@@ -1,7 +1,13 @@
-
-
-
-
+<div class="container-fluid">
+<div class="menu">
+<ul class="nav navbar-nav">
+    <li class="navColor" ui-sref="home"> Home </li>
+    <li class="navColor" ui-sref="About"> Welcome </li>
+    <li class="navColor" ui-sref="linechart"> Chart </li>
+    <li class="navColor" ui-sref="newsfeed"> DateSearch </li>
+</ul>
+</div>
+</div>
 
 
 
@@ -15,11 +21,17 @@
 
 
 
-<input type="text" name="searchBox" value="" placeholder="Enter YYYY-MM-DD" ng-model="pub_date">
- <button ng-click="gotNews(pub_date)">CLICK ME</button>
 
-<ul ng-repeat="new in news" >
+<!-- <div class="newsBG">
+<img class="nyt" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/The_New_York_Times_logo.png/800px-The_New_York_Times_logo.png" />
+<h4 class="nytBanner">Search News for a Specific Date</h4>
+<br>
+<div class="newsResults">
+<input type="text" name="searchBox" value="" placeholder="Enter YYYY-MM-DD" ng-model="pub_date">
+ <button ng-click="gotNews(pub_date)">search</button>
+<ul class="newsRepeat" ng-repeat="new in news" >
   <li class="clickColor">{{ new.headline.main }}</li>
   <li class="clickColor">{{ new.snippet }}</li>
-  <!-- <li class="clickColor">{{ new.pub_date}}</li> -->
-</ul>
+  <li class="clickColor">{{ new.pub_date}}</li> -->
+<!-- </ul> -->
+<!-- </div> -->

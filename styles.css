@@ -277,6 +277,11 @@ input.search-text::-webkit-search-cancel-button {
 
 
 
+.moveNyt {
+  position: absolute;
+  width: 100%;
+  padding: 30px;
+}
 
 
 
@@ -285,8 +290,10 @@ input.search-text::-webkit-search-cancel-button {
 
 
 
-
-
+.moveDuck {
+  position: relative;
+  height: 20vh;
+}
 
 
 
