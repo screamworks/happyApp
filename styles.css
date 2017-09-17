@@ -201,7 +201,7 @@ nav {
 
 h1, input{
   color: #444;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto' sans-serif;
   font-weight: 300;
 }
 h1{
@@ -420,4 +420,32 @@ input.search-text::-webkit-search-cancel-button {
 .newsResults {
   position: relative;
   top: 6vh;
+}
+
+
+.welcome {
+  padding: 3% 10%;
+  animation: typing-text 1s steps(200);
+  font-family: 'Roboto' sans-serif;
+  letter-spacing: 1px;
+  /*background: #F2F2F2;*/
+  /*overflow: scroll;
+  white-space: nowrap;*/
+
+}
+
+@keyframes typing-text {
+  from {
+    width: 0;
+  }
+  to {
+    width: 3000px;
+  }
+}
+
+.centerBtn {
+  margin: 0 auto;
+  width: 12%;
+  text-align: center;
+  padding: 1%;
 }
