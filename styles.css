@@ -1,6 +1,8 @@
 .chartWrapper {
   position: relative;
-  padding: 2vw;
+  padding-top: 2vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
   background-color: #262626;
   /*opacity: .9;*/
   color: white;
@@ -19,7 +21,14 @@
 
 }
 
-
+.chartInstruct {
+  background-color: #262626;
+  color: white;
+  padding-top: 1vh;
+  padding-left: 5vw;
+  padding-bottom: 5vh;
+  font-weight: 100;
+}
 
 
 
@@ -101,7 +110,7 @@ nav {
   font-size: 80pt;
   color: #1a1a1a;
   background-color: rgba(26, 140, 255, .7);
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 
 .first {
@@ -392,7 +401,7 @@ input.search-text::-webkit-search-cancel-button {
   /*background-color: #e0e0d1;*/
   background-repeat: no-repeat;
   background-size: cover;
-  height: 200vh;
+  height: 400vh;
   width: 100%;
   z-index: -5;
   text-align: center;

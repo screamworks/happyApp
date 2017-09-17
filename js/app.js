@@ -11,7 +11,6 @@ angular.module('hotspot',["ui.router"])
     .state("about", {
       url: "/about",
       templateUrl: "../views/about.html",
-      controller: "aboutCtrl"
     })
 
     .state("factpage", {
