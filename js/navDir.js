@@ -4,6 +4,6 @@ angular.module('hotspot').directive('navDir', function(){
 
     restrict: 'E',
 
-    templateUrl: '../views/nav.html'
+    templateUrl: '/views/nav.html'
   }
 })

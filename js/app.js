@@ -10,7 +10,7 @@ angular.module('hotspot',["ui.router"])
 
     .state("about", {
       url: "/about",
-      templateUrl: "../views/about.html",
+      templateUrl: "/views/about.html",
     })
 
     .state("factpage", {
