@@ -4,6 +4,6 @@ angular.module('hotspot').directive('newsDir', function(){
 
     restrict: 'E',
 
-    templateUrl: '../views/news.html'
+    templateUrl: 'views/news.html'
   }
 })
