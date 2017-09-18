@@ -401,7 +401,7 @@ input.search-text::-webkit-search-cancel-button {
   /*background-color: #e0e0d1;*/
   /*background-repeat: repeat;*/
   background-size: cover;
-  height: 200vh;
+  height: 300vh;
   width: 100%;
   z-index: -5;
   text-align: center;
